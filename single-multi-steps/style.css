@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+  }
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f6f7fb;
+}
+.container{
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .steps{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.steps .circle{
+    height: 50px;
+    width: 50px;
+    border: 4px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    background:#fff;
+}
+.steps .circle.active{
+    border-color: #4070f4;
+    color: #4070f4;
+}
+.steps .progress-bar{
+    position: absolute;
+    height: 4px;
+    width:100%;
+    background: #e0e0e0;
+    z-index: -1;
+}
+.progress-bar .indicator{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #4070f4;
+}
+.container .buttons{
+    display: flex;
+    gap: 20px;
+    margin-top: 100px;
+}
+.buttons button{
+    padding: 8px 25px;
+    background: #4070f4;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+.buttons button:disabled{
+    background:#87a5f8;
+    cursor: not-allowed;
+}
